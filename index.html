@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=!, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <script defer src="script/script.js"></script>
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/body.css" rel="stylesheet">
+</head>
+<body class="body">
+<form class="js-form">
+    <fieldset class="fieldset">
+        <legend class="form__legend">Kantor</legend>
+        <button type="button" title="odśwież kurs walut" class="form__resetButton js-formResetButton"><strong>↺</strong></button>
+        <div class="form__fieldsAreas">
+        <div class="form__fieldsArea form__fieldsAreaSell">
+            <p>
+                <Label>
+                    <input type="radio" name="radio" checked class="form__radioSell js-form__radioSell">
+                    Sprzedaż
+                </Label>
+
+            </p>
+            <p>
+                <label>
+                  <span class="form__labelText">Dolar</span>  
+                    <input name="DolarSell" type="number"  class="form__field js-form__dolarSell"  readonly step="any">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <span class="form__labelText">Euro</span>
+                    <input name="EuroSell" type="number" class="form__field js-form__euroSell"  readonly step="any">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <span class="form__labelText">Funt</span> 
+                    <input name="FuntSell" type="number" class="form__field js-form__funtSell" readonly step="any">
+                </label>
+            </p>
+        </div>
+        <div class="form__fieldsArea form__fieldsAreaBuy">
+            <p>
+                <Label>        
+                    <input type="radio" name="radio" class="js-form__radioBuy">
+                    Kupno </Label>
+            </p>
+            <p>
+                <label>
+                    
+                    <input name="DolarBuy" type="number" class="form__field js-form__dolarBuy" readonly step="any">
+                </label>
+            </p>
+            <p>
+                <label>
+                     
+                    <input name="EuroBuy" type="number" class="form__field  js-form__euroBuy"  readonly step="any">
+                </label>
+            </p>
+            <p>
+                <label>
+                    
+                    <input name="FuntBuy" type="number" class="form__field js-form__funtBuy"  readonly step="any">
+                </label>
+            </p>
+        </div>
+    </div>
+    
+        <p>
+            <label> <p>Wybierz walutę</p>
+                <select class="form__select  js-form__select">
+                    <option>Dolar</option>
+                    <option>Euro</option>
+                    <option>Funt</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <label>
+                <p>Wpisz wartość <span class="js-from__amountSymbol">(w dolarach)</span></p>
+                <input type="number" step="0.01" class="form__amount js-form__amount" required>
+
+            </label>
+        </p>
+        
+
+    </fieldset>
+    <button class="calculateButton ">Oblicz</button>
+    <p><strong class=" js-form__result "></strong></p>
+   
+</form>
+
+
+
+
+
+
+
+</body>
+
+</html>

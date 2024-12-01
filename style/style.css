@@ -1,0 +1,103 @@
+.fieldset {
+
+    max-width: 100%;
+    border-radius: 10px;
+    background-color: rgba(215, 213, 213, 0.989);
+}
+
+.form__legend {
+    width: 100px;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.form__fieldsAreas{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.form__fieldsArea {
+    width: 100%;
+    max-width: 350px;
+    min-width: 195px;
+}
+
+.form__fieldsAreaSell {
+    margin-right: 5px;
+
+
+}
+
+.form__fieldsAreaBuy {
+    margin-left: 5px;
+    text-align: start;
+    max-width: 250px;
+
+}
+
+.form__radioSell {
+    margin-left: 100px;
+}
+
+.form__labelText {
+    margin-right: 5px;
+    display: inline-block;
+    margin-right: 20px;
+    width: 70px;
+
+}
+
+.form__field {
+
+    padding: 5px;
+    max-width: 100px;
+    text-align: end;
+    border-radius: 20px;
+    border-color: #aaa;
+
+}
+
+.form__amount{
+    width: 80%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.form__select {
+    margin-bottom: 10px;
+    width: 80%;
+    text-align: center;
+    background-color: cadetblue;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form__resetButton {
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgba(0, 162, 255, 0.882);
+    color: white;
+}
+
+.calculateButton {
+    width: 100%;
+    max-width: auto;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    background-color: teal;
+}
+
+.calculateButton:hover {
+    background-color: rgb(83, 221, 221);
+}
+
+
+
