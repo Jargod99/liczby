@@ -1,5 +1,5 @@
 # Cantor Calculator
-![KantorCalculator](img/CantorPicture.PNG)
+![KantorCalculator](imges/CantorPicture.PNG)
 ## Demo
 https://jargod99.github.io/liczby/
 ## Description
