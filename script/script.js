@@ -23,24 +23,28 @@
         currency = select.value;
         if (radioSellElement.checked) {
             switch (currency) {
-                case "Dolar": amountSymbolElement.innerText = "(warotść w dolarach)"
-                    console.log(amountSymbolElement.innerText.length);
-                    break;
-                case "Euro": amountSymbolElement.innerText = "(warotść w euro)"
-                    console.log(amountSymbolElement.innerText.length);
-                    break;
-                case "Funt": amountSymbolElement.innerText = "(warotść w funtach)"
-                    break;
+                case "Dolar": 
+                console.log(amountSymbolElement.innerText.length);
+                return "(warotść w dolarach)";
+                    
+                    
+                case "Euro": 
+                console.log(amountSymbolElement.innerText.length);
+                return "(warotść w euro)";
+                    
+                   
+                case "Funt": 
+                return "(warotść w funtach)";
+                    
             };
         } else {
-            amountSymbolElement.innerText = "(warotść w złotych)"
+            return "(warotść w złotych)";
         };
     };
 
     const amountResult = (select, dolarSellElement, euroSellElement, funtSellElement, dolarBuyElement, euroBuyElement, funtBuyElement, radioSellElement) => {
         const radioBuyElement = document.querySelector(".js-form__radioBuy");
         const amountElement = document.querySelector(".js-form__amount");
-        const resultElement = document.querySelector(".js-form__result");
 
         const currency = select.value;
         const dolarSell = dolarSellElement.value;
@@ -56,26 +60,26 @@
         if (radioSell === true) {
             switch (currency) {
                 case "Dolar":
-                    resultElement.innerText = `${amount} $ = ${(amount * dolarSell).toFixed(2)} PLN`;
-                    break;
+                    return `${amount} $ = ${(amount * dolarSell).toFixed(2)} PLN`;
+
                 case "Euro":
-                    resultElement.innerText = `${amount} € = ${(amount * euroSell).toFixed(2)} PLN`;
-                    break;
+                    return `${amount} € = ${(amount * euroSell).toFixed(2)} PLN`;
+
                 case "Funt":
-                    resultElement.innerText = `${amount} £ = ${(amount * funtSell).toFixed(2)} PLN`;
-                    break;
+                    return `${amount} £ = ${(amount * funtSell).toFixed(2)} PLN`;
+
             };
         } else if (radioBuy === true) {
             switch (currency) {
                 case "Dolar":
-                    resultElement.innerText = `${amount} PLN = ${(amount / dolarBuy).toFixed(2)} $`;
-                    break;
+                    return `${amount} PLN = ${(amount / dolarBuy).toFixed(2)} $`;
+
                 case "Euro":
-                    resultElement.innerText = `${amount} PLN = ${(amount / euroBuy).toFixed(2)} €`;
-                    break;
+                    return `${amount} PLN = ${(amount / euroBuy).toFixed(2)} €`;
+
                 case "Funt":
-                    resultElement.innerText = `${amount} PLN = ${(amount / funtBuy).toFixed(2)} £`;
-                    break;
+                    return `${amount} PLN = ${(amount / funtBuy).toFixed(2)} £`;
+
             };
         }
 
@@ -92,18 +96,21 @@
         const funtBuyElement = document.querySelector(".js-form__funtBuy");
         const select = document.querySelector(".js-form__select");
 
+
         onStartRefresh(dolarSellElement, euroSellElement, funtSellElement, dolarBuyElement, euroBuyElement, funtBuyElement);
         refreshButton(dolarSellElement, euroSellElement, funtSellElement, dolarBuyElement, euroBuyElement, funtBuyElement);
 
         formElement.addEventListener("input", () => {
             const amountSymbolElement = document.querySelector(".js-from__amountSymbol");
-            amountTypeOfCurrency(amountSymbolElement, select, radioSellElement);
+            amountSymbolElement.innerText =  amountTypeOfCurrency(amountSymbolElement, select, radioSellElement);
+           
         });
 
         formElement.addEventListener("submit", (event) => {
             event.preventDefault();
-            amountResult(select, dolarSellElement, euroSellElement, funtSellElement, dolarBuyElement, euroBuyElement, funtBuyElement, radioSellElement);
-
+            const resultElement = document.querySelector(".js-form__result");
+            const result = amountResult(select, dolarSellElement, euroSellElement, funtSellElement, dolarBuyElement, euroBuyElement, funtBuyElement, radioSellElement);
+            resultElement.innerText = (result);
         });
 
 
