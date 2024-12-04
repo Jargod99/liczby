@@ -15,17 +15,37 @@
     border-radius: 10px;
 }
 
-.form__fieldsAreas{
+.form__fieldsAreas {
     display: flex;
     justify-content: center;
     text-align: center;
     margin: 0 auto;
 }
 
+
+
 .form__fieldsArea {
-    width: 100%;
+    flex-basis: 50%;
     max-width: 350px;
     min-width: 195px;
+}
+
+@media (max-width: 767px) {
+    .form__fieldsAreas {
+        flex-wrap: wrap;
+    }
+
+    .form__fieldsArea {
+        flex-basis: 100%;
+
+    }
+
+    .media.media {
+
+        text-align: center;
+        margin-left: 80px;
+
+    }
 }
 
 .form__fieldsAreaSell {
@@ -63,7 +83,7 @@
 
 }
 
-.form__amount{
+.form__amount {
     width: 80%;
     border-radius: 10px;
     text-align: center;
@@ -110,7 +130,3 @@
     border-radius: 10px;
     box-shadow: 25px 15px 52px -15px #071407;
 }
-
-
-
-
