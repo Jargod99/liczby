@@ -4,6 +4,7 @@
     border-radius: 10px;
     background-color: rgba(215, 213, 213, 0.878);
     margin-top: 100px;
+    box-shadow: 25px 15px 52px -15px #071407;
 }
 
 .form__legend {
@@ -94,11 +95,22 @@
     color: white;
     border: none;
     background-color: teal;
+    box-shadow: 25px 15px 52px -15px #071407;
 }
 
 .calculateButton:hover {
     background-color: rgb(83, 221, 221);
 }
+
+.resultContainer {
+    background-color: rgb(222, 218, 218);
+    max-width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 25px 15px 52px -15px #071407;
+}
+
 
 
 
